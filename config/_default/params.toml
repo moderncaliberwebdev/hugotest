@@ -1,0 +1,4 @@
+colorScheme = "autumn"
+
+[article]
+  showAuthor = false

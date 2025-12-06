@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+site_url: https://example.org/
+display_url: https://example.org/
+logo_url: https://example.org/logo.png
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'content/posts'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          required: true,
+        }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'list',
+          default: ['Basics'],
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - {
+          label: 'Show Author',
+          name: 'showAuthor',
+          widget: 'boolean',
+          default: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: true }
