@@ -30,6 +30,13 @@ collections:
         }
       - { label: 'Description', name: 'description', widget: 'string' }
       - {
+          label: 'Cover Image',
+          name: 'featureimage',
+          widget: 'image',
+          required: false,
+          hint: 'Upload a cover/featured image for this post',
+        }
+      - {
           label: 'Categories',
           name: 'categories',
           widget: 'list',
