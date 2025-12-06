@@ -2,9 +2,12 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
-site_url: https://example.org/
-display_url: https://example.org/
-logo_url: https://example.org/logo.png
+# Uncomment the following lines for local development (without Netlify)
+# local_backend: true
+
+site_url: https://moderncaliber-hugo.netlify.app/ # Update this with your actual Netlify site URL
+display_url: https://moderncaliber-hugo.netlify.app/ # Update this with your actual Netlify site URL
+logo_url: https://moderncaliber-hugo.netlify.app/logo.png
 
 media_folder: static/img
 public_folder: /img
