@@ -2,7 +2,7 @@ title = "Modern Caliber Hugo Test"
 
 [params.author]
 name = "Caleb Martin"
-image = "img/author.jpg"
+image = "img/logo.png"
 headline = "A generally awesome human"
 bio = "A little bit about me"
 links = [
