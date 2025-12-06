@@ -11,7 +11,7 @@ tags:
   - marine equipment
   - boating
 draft: false
-showAuthor: true
+showAuthor: false
 ---
 
 Bringing your dog on the water adds fun, companionship, and memorable moments to any pontoon outing. Many boat owners prepare with life jackets, shaded rest areas, and plenty of clean water, although one item often overlooked is the ladder. A pontoon boat ladder plays a major role in helping dogs safely enter and exit the water, and the right design can make this experience easier for pets and people.

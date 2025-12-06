@@ -2,7 +2,7 @@ title = "Modern Caliber Hugo Test"
 
 [params.author]
 name = "Caleb Martin"
-image = "img/logo.png"
+image = "/img/logo.png"  # Use absolute path from site root
 headline = "A generally awesome human"
 bio = "A little bit about me"
 links = [

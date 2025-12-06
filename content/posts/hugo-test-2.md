@@ -5,7 +5,7 @@ description: Test
 categories:
   - Basics
 draft: false
-showAuthor: true
+showAuthor: false
 ---
 
 # Test heading 1
