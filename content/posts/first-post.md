@@ -1,11 +1,17 @@
 ---
-title: 'How to Choose a Dog-Friendly Ladder for Your Pontoon Boat'
+title: How to Choose a Dog-Friendly Ladder for Your Pontoon Boat
 date: 2025-11-21
-description: 'A comprehensive guide to selecting the right pontoon boat ladder that keeps your furry friends safe and comfortable on the water.'
-categories: ['Basics']
-tags: ['pontoon boats', 'dog safety', 'marine equipment', 'boating']
+description: A comprehensive guide to selecting the right pontoon boat ladder
+  that keeps your furry friends safe and comfortable on the water.
+categories:
+  - Basics
+tags:
+  - pontoon boats
+  - dog safety
+  - marine equipment
+  - boating
 draft: false
-showAuthor: false
+showAuthor: true
 ---
 
 Bringing your dog on the water adds fun, companionship, and memorable moments to any pontoon outing. Many boat owners prepare with life jackets, shaded rest areas, and plenty of clean water, although one item often overlooked is the ladder. A pontoon boat ladder plays a major role in helping dogs safely enter and exit the water, and the right design can make this experience easier for pets and people.
