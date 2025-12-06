@@ -1,0 +1,35 @@
+{{ $currentPage := . }}
+{{ $allPosts := where site.RegularPages "Section" "posts" }}
+{{ $otherPosts := where $allPosts "Permalink" "!=" $currentPage.Permalink }}
+{{ $recentPosts := $otherPosts | first 5 }}
+
+{{ if $recentPosts }}
+  <div class="lg:sticky {{ cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}">
+    <h3 class="text-xl font-bold text-neutral-900 dark:text-neutral mb-4">
+      Other Posts
+    </h3>
+    <ul class="space-y-4 not-prose">
+      {{ range $recentPosts }}
+        <li class="border-b border-neutral-200 dark:border-neutral-700 pb-4 last:border-0 last:pb-0">
+          <a 
+            href="{{ .RelPermalink }}" 
+            class="block hover:text-primary-600 dark:hover:text-primary-400 transition-colors group"
+          >
+            <h4 class="font-semibold text-base mb-1 line-clamp-2 group-hover:underline">
+              {{ .Title | emojify }}
+            </h4>
+            {{ if .Params.description }}
+              <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2 mt-1">
+                {{ .Params.description }}
+              </p>
+            {{ end }}
+            <time class="text-xs text-neutral-400 dark:text-neutral-500 mt-2 block">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
