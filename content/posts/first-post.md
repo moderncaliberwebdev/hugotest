@@ -3,6 +3,7 @@ title: How to Choose a Dog-Friendly Ladder for Your Pontoon Boat
 date: 2025-11-21
 description: A comprehensive guide to selecting the right pontoon boat ladder
   that keeps your furry friends safe and comfortable on the water.
+featureimage: /img/images.webp
 categories:
   - Basics
 tags:
