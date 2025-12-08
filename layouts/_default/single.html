@@ -44,7 +44,7 @@
           </div>
         {{ end }}
         
-        {{/* Posts Sidebar - Show if TOC is not shown, or show below TOC */}}
+        {{/* Posts Sidebar - Custom extension */}}
         {{ if templates.Exists "partials/posts-sidebar.html" }}
           <div class="{{ if $showToc }}mt-8{{ end }}">
             {{ partial "posts-sidebar.html" . }}

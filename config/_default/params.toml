@@ -1,4 +1,7 @@
 colorScheme = "autumn"
 
+# Enable hotlinking for featured images stored in static folder
+hotlinkFeatureImage = true
+
 [article]
   showAuthor = false

@@ -211,10 +211,10 @@
       "name": "Caleb Martin"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-12-06T12:34:00-05:00",
-    "datePublished": "2025-12-06T12:34:00-05:00",
+    "dateCreated": "2025-12-06T12:44:00-05:00",
+    "datePublished": "2025-12-06T12:44:00-05:00",
     
-    "dateModified": "2025-12-06T12:34:00-05:00",
+    "dateModified": "2025-12-06T12:44:00-05:00",
     
     
     
@@ -229,6 +229,35 @@
   
 
   
+  
+    
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+    
+    
+    if (window.location.hash.includes("recovery_token")) {
+      window.netlifyIdentity.on("close", () => {
+        
+        if (window.location.hash.includes("recovery_token")) {
+          
+          window.location.href = "/admin/";
+        }
+      });
+    }
+    
+    
+    window.netlifyIdentity.init();
+  }
+</script>
+
   
 
   
@@ -313,6 +342,24 @@
   
     <p class="text-base font-medium">
       Posts
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/contact/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Contact"
+  title="Contact">
+  
+  
+    <p class="text-base font-medium">
+      Contact
     </p>
   
 </a>
@@ -437,6 +484,26 @@
 
 
             
+              
+  <li class="mt-1">
+  <a
+    href="/contact/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Contact"
+    title="Contact">
+    
+    
+      <p class="text-bg font-bg">
+        Contact
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
 
           </ul>
           
@@ -507,7 +574,7 @@
     
       <span class="px-2 text-base text-primary-500">&middot;</span>
       <span class="text-base text-neutral-400">
-        3
+        4
       </span>
     
   </h2>

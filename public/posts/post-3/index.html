@@ -234,6 +234,35 @@
 
   
   
+    
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+    
+    
+    if (window.location.hash.includes("recovery_token")) {
+      window.netlifyIdentity.on("close", () => {
+        
+        if (window.location.hash.includes("recovery_token")) {
+          
+          window.location.href = "/admin/";
+        }
+      });
+    }
+    
+    
+    window.netlifyIdentity.init();
+  }
+</script>
+
+  
 
   
   
@@ -317,6 +346,24 @@
   
     <p class="text-base font-medium">
       Posts
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/contact/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Contact"
+  title="Contact">
+  
+  
+    <p class="text-base font-medium">
+      Contact
     </p>
   
 </a>
@@ -433,6 +480,26 @@
     
       <p class="text-bg font-bg">
         Posts
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/contact/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Contact"
+    title="Contact">
+    
+    
+      <p class="text-bg font-bg">
+        Contact
       </p>
     
   </a>
@@ -586,6 +653,25 @@
       
         <li class="border-b border-neutral-200 dark:border-neutral-700 pb-4 last:border-0 last:pb-0">
           <a 
+            href="/posts/healing-hands/" 
+            class="block hover:text-primary-600 dark:hover:text-primary-400 transition-colors group"
+          >
+            <h4 class="font-semibold text-base mb-1 line-clamp-2 group-hover:underline">
+              Healing Hands
+            </h4>
+            
+              <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2 mt-1">
+                Healing Hands PT
+              </p>
+            
+            <time class="text-xs text-neutral-400 dark:text-neutral-500 mt-2 block">
+              December 6, 2025
+            </time>
+          </a>
+        </li>
+      
+        <li class="border-b border-neutral-200 dark:border-neutral-700 pb-4 last:border-0 last:pb-0">
+          <a 
             href="/posts/hugo-test-2/" 
             class="block hover:text-primary-600 dark:hover:text-primary-400 transition-colors group"
           >
@@ -695,6 +781,19 @@
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/healing-hands/">
+              <span class="leading-6">
+                Healing Hands&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-06T12:44:00-05:00">6 December 2025</time>
+              </span>
+            
           
         </span>
       </div>

@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="min-h-screen flex items-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+    {{/* Left Side - Site Title and Contact Us */}}
+    <div class="flex flex-col">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-neutral-900 dark:text-neutral mb-6"
+      >
+        {{ .Site.Title }}
+      </h1>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300"
+      >
+        Contact Us
+      </h2>
+      <p class="mt-6 text-lg text-neutral-600 dark:text-neutral-400">
+        We'd love to hear from you. Send us a message and we'll respond as soon
+        as possible.
+      </p>
+    </div>
+
+    {{/* Right Side - Contact Form */}}
+    <div class="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-8 shadow-lg">
+      <form name="contact" method="POST" netlify class="space-y-6">
+        <div>
+          <label
+            for="name"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+            placeholder="Your name"
+          />
+        </div>
+
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+            placeholder="your.email@example.com"
+          />
+        </div>
+
+        <div>
+          <label
+            for="subject"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+          >
+            Subject
+          </label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+            placeholder="What is this regarding?"
+          />
+        </div>
+
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-md bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral focus:ring-2 focus:ring-primary-500 focus:border-primary-500 resize-none"
+            placeholder="Your message here..."
+          ></textarea>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{ end }}

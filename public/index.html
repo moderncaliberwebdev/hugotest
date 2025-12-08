@@ -220,6 +220,35 @@
 
   
   
+    
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+    
+    
+    if (window.location.hash.includes("recovery_token")) {
+      window.netlifyIdentity.on("close", () => {
+        
+        if (window.location.hash.includes("recovery_token")) {
+          
+          window.location.href = "/admin/";
+        }
+      });
+    }
+    
+    
+    window.netlifyIdentity.init();
+  }
+</script>
+
+  
 
   
   
@@ -303,6 +332,24 @@
   
     <p class="text-base font-medium">
       Posts
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/contact/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Contact"
+  title="Contact">
+  
+  
+    <p class="text-base font-medium">
+      Contact
     </p>
   
 </a>
@@ -419,6 +466,26 @@
     
       <p class="text-bg font-bg">
         Posts
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/contact/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Contact"
+    title="Contact">
+    
+    
+      <p class="text-bg font-bg">
+        Contact
       </p>
     
   </a>
